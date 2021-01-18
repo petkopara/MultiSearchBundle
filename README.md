@@ -48,6 +48,8 @@ You can directly use the service and to apply the multi search to any doctrine q
 
 Create your form type and include the multiSearchType in the buildForm function: 
 
+    use Petkopara\MultiSearchBundle\Form\Type\MultiSearchType;
+
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
@@ -57,7 +59,7 @@ Create your form type and include the multiSearchType in the buildForm function:
                         'name',
                         'content'
                      ), 
-                     'search_comparison_type' = > 'wildcard' //optional, what type of comparison to applied ('wildcard','starts_with', 'ends_with', 'equals')
+                     'search_comparison_type' => 'wildcard' //optional, what type of comparison to applied ('wildcard','starts_with', 'ends_with', 'equals')
                      
                 ))
         ;
